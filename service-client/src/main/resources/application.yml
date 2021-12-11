@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: client
+
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 2000
+  application:
+    name: client
+  consumer:
+    check: false
+    retries: 3

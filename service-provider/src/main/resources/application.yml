@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: prvoider
+
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 2000
+  protocol:
+    port: -1
+  application:
+    name: prvoider
