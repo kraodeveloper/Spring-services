@@ -1,4 +1,4 @@
-package org.jackrao.learning.configuration;
+package org.jackrao.learning.cache.cacheManger;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.Cache;
@@ -13,6 +13,10 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class CacheConfiguration {
     public static final long SYSTEM_DEFAULT_EXPIRES = 4 * 60 * 1000;
+
+    /**
+     * 用caffeine cache替换Spring内置的Guava cache，全局Cache Config，可以通过获取这个bean来调用get拿对应name的缓存
+     */
     @Bean
     public CacheManager configCacheManager() {
         CaffeineCacheManager manager = new CaffeineCacheManager();

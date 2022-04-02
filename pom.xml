@@ -7,7 +7,8 @@
 		<module>service-client</module>
 		<module>service-provider</module>
 		<module>service-api</module>
-	</modules>
+        <module>common-cache</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -82,4 +83,15 @@
 			<artifactId>jakarta.ws.rs-api</artifactId>
 		</dependency>
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.projectreactor</groupId>
+				<artifactId>reactor-bom</artifactId>
+				<version>2020.0.14</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
